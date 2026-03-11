@@ -942,37 +942,72 @@
                     @endif
                 </header>
 
-                <main class="mt-6 flex justify-center items-center">
+                <main class="mt-10 flex justify-center items-center">
                     <div class="relative group">
+
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse">
+                            class="absolute -inset-4 bg-gradient-to-r from-rose-300 via-red-400 to-amber-200 rounded-[3rem] blur-2xl opacity-30 group-hover:opacity-60 transition duration-1000">
                         </div>
 
                         <div
-                            class="relative px-8 py-6 bg-gradient-to-br from-pink-50 to-white border border-pink-100 rounded-2xl shadow-xl flex flex-col items-center">
+                            class="relative px-16 py-12 bg-white/80 backdrop-blur-md border-2 border-rose-100 rounded-[2.5rem] shadow-2xl flex flex-col items-center border-b-rose-200">
 
-                            <span class="text-4xl mb-2 animate-bounce">💖</span>
+                            <div class="relative mb-6">
+                                <div class="absolute -inset-4 bg-rose-100 rounded-full animate-ping opacity-20"></div>
+                                <div
+                                    class="flex items-center justify-center bg-gradient-to-tr from-rose-50 to-white w-24 h-24 rounded-full shadow-inner">
+                                    <span class="text-6xl animate-pulse">💍</span>
+                                </div>
+                                <span class="absolute -bottom-2 -right-2 text-3xl">🌹</span>
+                            </div>
 
-                            <h1 class="text-4xl font-extrabold tracking-tight">
-                                <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-red-600">
-                                    Khallat
-                                </span>
-                                <span
-                                    class="text-red-500 inline-block hover:scale-125 transition-transform duration-300 ml-1">🌹</span>
-                            </h1>
+                            <div class="text-center">
+                                <p class="text-rose-400 uppercase tracking-[0.3em] text-xs font-bold mb-1">To My Future
+                                </p>
+                                <h1 class="text-7xl font-serif font-black tracking-tight mb-2">
+                                    <span
+                                        class="bg-clip-text text-transparent bg-gradient-to-b from-rose-500 to-red-800">
+                                        Khallat
+                                    </span>
+                                </h1>
+                                <div class="flex items-center justify-center gap-2">
+                                    <span class="h-[2px] w-12 bg-gradient-to-r from-transparent to-rose-300"></span>
+                                    <span class="text-rose-500 text-xl">❤️</span>
+                                    <span class="h-[2px] w-12 bg-gradient-to-l from-transparent to-rose-300"></span>
+                                </div>
+                            </div>
 
-                            <div class="flex gap-2 mt-3 text-pink-400 opacity-80">
-                                <span>💕</span>
-                                <span>✨</span>
-                                <span>💕</span>
+                            <p class="mt-6 text-gray-700 italic font-medium text-lg text-center leading-relaxed">
+                                "You are my today <br> and all of my tomorrows."
+                            </p>
+
+                            <div class="flex gap-6 mt-8">
+                                <div
+                                    class="flex flex-col items-center group-hover:translate-y-[-5px] transition-transform duration-500">
+                                    <span class="text-2xl mb-1">🕊️</span>
+                                    <span class="text-[10px] text-rose-300 uppercase tracking-widest">Peace</span>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center group-hover:translate-y-[-10px] transition-transform duration-700">
+                                    <span class="text-2xl mb-1">♾️</span>
+                                    <span class="text-[10px] text-rose-300 uppercase tracking-widest">Always</span>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center group-hover:translate-y-[-5px] transition-transform duration-500">
+                                    <span class="text-2xl mb-1">🔒</span>
+                                    <span class="text-[10px] text-rose-300 uppercase tracking-widest">Forever</span>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="absolute -top-4 -right-4 animate-bounce text-2xl">✨</div>
+                        <div class="absolute -bottom-4 -left-4 animate-bounce delay-500 text-2xl">✨</div>
                     </div>
                 </main>
 
-                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                {{-- <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                </footer>
+                </footer> --}}
             </div>
         </div>
     </div>
