@@ -62,6 +62,7 @@ class ProductController extends Controller
         $validated['price'] = str_replace(',', '', $request->price);
 
         $product->update($validated);
+        
 
         return redirect()->route('product.index');
     }
