@@ -942,68 +942,58 @@
                     @endif
                 </header>
 
-                <main class="mt-10 flex justify-center items-center">
-                    <div class="relative group">
+               <main style="margin-top: 3rem; display: flex; justify-content: center; align-items: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="position: relative; transition: all 0.5s ease;">
+        
+        <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: linear-gradient(45deg, #fda4af, #f87171, #fde68a); border-radius: 3rem; filter: blur(20px); opacity: 0.4;"></div>
 
-                        <div
-                            class="absolute -inset-4 bg-gradient-to-r from-rose-300 via-red-400 to-amber-200 rounded-[3rem] blur-2xl opacity-30 group-hover:opacity-60 transition duration-1000">
-                        </div>
+        <div style="position: relative; padding: 3rem 4rem; background: rgba(255, 255, 255, 0.9); border: 2px solid #ffe4e6; border-radius: 2.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); display: flex; flex-direction: column; align-items: center; min-width: 320px;">
+            
+            <div style="position: relative; margin-bottom: 1.5rem;">
+                <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);">
+                    <span style="font-size: 4rem; display: inline-block;">💍</span>
+                </div>
+                <span style="position: absolute; bottom: 0; right: -5px; font-size: 2rem;">🌹</span>
+            </div>
 
-                        <div
-                            class="relative px-16 py-12 bg-white/80 backdrop-blur-md border-2 border-rose-100 rounded-[2.5rem] shadow-2xl flex flex-col items-center border-b-rose-200">
+            <div style="text-align: center;">
+                <p style="color: #fb7185; text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; font-weight: bold; margin-bottom: 0.5rem;">To My Future Fiancée</p>
+                
+                <h1 style="font-size: 5rem; font-weight: 900; margin: 0; padding: 0; line-height: 1; background: linear-gradient(to bottom, #e11d48, #9f1239); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Khallat
+                </h1>
 
-                            <div class="relative mb-6">
-                                <div class="absolute -inset-4 bg-rose-100 rounded-full animate-ping opacity-20"></div>
-                                <div
-                                    class="flex items-center justify-center bg-gradient-to-tr from-rose-50 to-white w-24 h-24 rounded-full shadow-inner">
-                                    <span class="text-6xl animate-pulse">💍</span>
-                                </div>
-                                <span class="absolute -bottom-2 -right-2 text-3xl">🌹</span>
-                            </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                    <div style="height: 2px; width: 50px; background: linear-gradient(to right, transparent, #f43f5e);"></div>
+                    <span style="color: #e11d48; font-size: 1.5rem;">❤️</span>
+                    <div style="height: 2px; width: 50px; background: linear-gradient(to left, transparent, #f43f5e);"></div>
+                </div>
+            </div>
 
-                            <div class="text-center">
-                                <p class="text-rose-400 uppercase tracking-[0.3em] text-xs font-bold mb-1">To My Future
-                                </p>
-                                <h1 class="text-7xl font-serif font-black tracking-tight mb-2">
-                                    <span
-                                        class="bg-clip-text text-transparent bg-gradient-to-b from-rose-500 to-red-800">
-                                        Khallat
-                                    </span>
-                                </h1>
-                                <div class="flex items-center justify-center gap-2">
-                                    <span class="h-[2px] w-12 bg-gradient-to-r from-transparent to-rose-300"></span>
-                                    <span class="text-rose-500 text-xl">❤️</span>
-                                    <span class="h-[2px] w-12 bg-gradient-to-l from-transparent to-rose-300"></span>
-                                </div>
-                            </div>
+            <p style="margin-top: 2rem; color: #4b5563; font-style: italic; font-weight: 500; font-size: 1.25rem; text-align: center; line-height: 1.6;">
+                "Every heart sings a song, incomplete, <br> until another heart whispers back."
+            </p>
 
-                            <p class="mt-6 text-gray-700 italic font-medium text-lg text-center leading-relaxed">
-                                "You are my today <br> and all of my tomorrows."
-                            </p>
+            <div style="display: flex; gap: 2rem; margin-top: 2.5rem;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span style="font-size: 1.5rem;">🕊️</span>
+                    <span style="font-size: 10px; color: #fda4af; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">Peace</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span style="font-size: 1.5rem;">♾️</span>
+                    <span style="font-size: 10px; color: #fda4af; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">Always</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span style="font-size: 1.5rem;">🔒</span>
+                    <span style="font-size: 10px; color: #fda4af; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">Forever</span>
+                </div>
+            </div>
+        </div>
 
-                            <div class="flex gap-6 mt-8">
-                                <div
-                                    class="flex flex-col items-center group-hover:translate-y-[-5px] transition-transform duration-500">
-                                    <span class="text-2xl mb-1">🕊️</span>
-                                    <span class="text-[10px] text-rose-300 uppercase tracking-widest">Peace</span>
-                                </div>
-                                <div
-                                    class="flex flex-col items-center group-hover:translate-y-[-10px] transition-transform duration-700">
-                                    <span class="text-2xl mb-1">♾️</span>
-                                    <span class="text-[10px] text-rose-300 uppercase tracking-widest">Always</span>
-                                </div>
-                                <div
-                                    class="flex flex-col items-center group-hover:translate-y-[-5px] transition-transform duration-500">
-                                    <span class="text-2xl mb-1">🔒</span>
-                                    <span class="text-[10px] text-rose-300 uppercase tracking-widest">Forever</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="absolute -top-4 -right-4 animate-bounce text-2xl">✨</div>
-                        <div class="absolute -bottom-4 -left-4 animate-bounce delay-500 text-2xl">✨</div>
-                    </div>
-                </main>
+        <div style="position: absolute; top: -15px; right: -15px; font-size: 1.5rem;">✨</div>
+        <div style="position: absolute; bottom: -15px; left: -15px; font-size: 1.5rem;">✨</div>
+    </div>
+</main>
 
                 {{-- <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
