@@ -957,7 +957,7 @@
             </div>
 
             <div style="text-align: center;">
-                <p style="color: #fb7185; text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; font-weight: bold; margin-bottom: 0.5rem;">To My Future Fiancée</p>
+                <p style="color: #fb7185; text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.75rem; font-weight: bold; margin-bottom: 0.5rem;">To My Love</p>
                 
                 <h1 style="font-size: 5rem; font-weight: 900; margin: 0; padding: 0; line-height: 1; background: linear-gradient(to bottom, #e11d48, #9f1239); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                     Khallat
@@ -970,24 +970,9 @@
                 </div>
             </div>
 
-            <p style="margin-top: 2rem; color: #4b5563; font-style: italic; font-weight: 500; font-size: 1.25rem; text-align: center; line-height: 1.6;">
-                "Every heart sings a song, incomplete, <br> until another heart whispers back."
-            </p>
+            
 
-            <div style="display: flex; gap: 2rem; margin-top: 2.5rem;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <span style="font-size: 1.5rem;">🕊️</span>
-                    <span style="font-size: 10px; color: #fda4af; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">Peace</span>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <span style="font-size: 1.5rem;">♾️</span>
-                    <span style="font-size: 10px; color: #fda4af; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">Always</span>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <span style="font-size: 1.5rem;">🔒</span>
-                    <span style="font-size: 10px; color: #fda4af; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">Forever</span>
-                </div>
-            </div>
+           
         </div>
 
         <div style="position: absolute; top: -15px; right: -15px; font-size: 1.5rem;">✨</div>
