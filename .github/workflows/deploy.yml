@@ -36,6 +36,7 @@ jobs:
               composer install
               php artisan migrate
               php artisan config:clear
+              php artisan route:clear
               # npm install
               # npm run build
             fi
