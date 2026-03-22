@@ -14,7 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
+Route::get('/test-job', function () {
     UpdateProductQtyJob::dispatch();
     return response()->json(['success']);
 });
