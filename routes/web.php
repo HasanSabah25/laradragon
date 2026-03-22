@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Jobs\UpdateProductQtyJob;
 use Illuminate\Support\Facades\Route;
 use Goutte\Client; // deprecated for php 8.2
 use Symfony\Component\BrowserKit\HttpBrowser;
@@ -11,6 +12,11 @@ use Symfony\Component\DomCrawler\Crawler;
 //composer require symfony/browser-kit symfony/http-client symfony/css-selector
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/test', function () {
+    UpdateProductQtyJob::dispatch();
+    return response()->json(['success']);
 });
 
 Route::get('/users', function () {
