@@ -4,11 +4,14 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Jobs\UpdateProductQtyJob;
-use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 use Goutte\Client; // deprecated for php 8.2
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 use Symfony\Component\BrowserKit\HttpBrowser;
-use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpClient\HttpClient;
 //composer require symfony/browser-kit symfony/http-client symfony/css-selector
 Route::get('/', function () {
     return view('welcome');
@@ -17,6 +20,69 @@ Route::get('/', function () {
 Route::get('/test-job', function () {
     UpdateProductQtyJob::dispatch();
     return response()->json(['success']);
+});
+
+Route::get('/test-cache', function () {
+    // 1. Clear everything first
+    Cache::forget('all_products');
+
+    // 2. Measure Database Speed (First time)
+    $start = microtime(true);
+    $products = Cache::remember('all_products', 600, function () {
+        return DB::table('products')->select('id', 'name')->get();
+    });
+    $timeDb = (microtime(true) - $start) * 1000;
+
+    // 3. Measure Cache Speed (Second time - Hits Redis/Memurai)
+    $start = microtime(true);
+    $productsFromCache = Cache::get('all_products');
+    $timeCache = (microtime(true) - $start) * 1000;
+
+    return response()->json([
+        'db_hit_time' => $timeDb . ' ms',
+        'cache_hit_time' => $timeCache . ' ms',
+        'products_count' => $products->count(),
+        'improvement' => round(($timeDb / $timeCache), 2) . 'x faster'
+    ]);
+});
+
+Route::get('/stress-test', function () {
+    $start = microtime(true);
+
+    for ($i = 0; $i < 1000; $i++) {
+        // We simulate a user hitting a specific product cache
+        Cache::get('all_products'); 
+    }
+
+    return (microtime(true) - $start) * 1000 . " ms for 1,000 reads";
+});
+
+Route::get('/stress-test-final', function () {
+    // 1. Create a "Real World" result: An array of 1,000 simple points (ID + Price)
+    // This is much smaller than 11,000 full Eloquent objects.
+    $data = [];
+    for ($i = 0; $i < 500; $i++) {
+        $data[] = ['id' => $i, 'value' => rand(100, 1000)];
+    }
+
+    // 2. Pre-fill the cache so we only measure the READ speed
+    Cache::put('dashboard_chart', $data, 600);
+
+    $start = microtime(true);
+
+    // 3. Simulate 1,000 users hitting this dashboard chart
+    for ($i = 0; $i < 1000; $i++) {
+        Cache::get('dashboard_chart'); 
+    }
+
+    $totalTime = (microtime(true) - $start) * 1000;
+
+    return response()->json([
+        'driver' => config('cache.default'),
+        'total_time' => round($totalTime, 2) . ' ms',
+        'avg_per_read' => round($totalTime / 1000, 4) . ' ms',
+        'items_in_array' => count($data)
+    ]);
 });
 
 Route::get('/users', function () {
