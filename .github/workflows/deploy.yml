@@ -33,10 +33,9 @@ jobs:
             if [ "${{ github.ref_name }}" = "staging" ]; then
               cd /var/www/staging.laradragon.shop
               git pull origin staging
-              # composer install
+              composer install
               php artisan migrate
               php artisan config:clear
-              php artisan route:clear
               # npm install
               # npm run build
             fi
