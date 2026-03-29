@@ -23,7 +23,7 @@ jobs:
               git pull origin main
               # composer install --no-dev --optimize-autoloader
               php artisan migrate --force
-              php artisan db:seed
+              # php artisan db:seed
               php artisan config:cache
               php artisan route:cache
               # php artisan queue:restart
@@ -36,7 +36,7 @@ jobs:
               git pull origin staging
               # composer install
               php artisan migrate
-              php artisan db:seed
+              # php artisan db:seed
               php artisan config:clear
               # npm install
               # npm run build
